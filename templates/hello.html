@@ -1,14 +1,11 @@
 
 <!-- Con extends importas la estructura de html -->
-
-
 {% extends "base.html" %}
+{% import "macros.html" as muchas_macros %}
 
 {% block title %}
 {{super()}} hello
 {% endblock %}
-
-
 
 
 <!-- Para visualizar el cuerpo incluimos block body en la base  -->
@@ -22,7 +19,7 @@
 
     <ul>
     {% for perro in perros %}
-        <li>{{perro}}</li>
+        {{ muchas_macros.render_jauria(perro) }}
     {% endfor %} 
     </<ul>
 

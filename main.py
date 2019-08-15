@@ -19,9 +19,6 @@ perros = [
 
 
 
-############################
-# Creación de rutas 
-#############################
 @app.route("/")
 def index():
     user_ip = request.remote_addr
