@@ -1,6 +1,10 @@
 
 <nav>
    <ul>
+       <!-- Primero buscar la carpeta que contiene las imagenes static -->
+       <!-- Segundo con filaname colocas la ruta de la imagen -->
+       <!-- Y con el alt pones el nombre que le quieres dar a la imagen  -->
+       <img src="{{ url_for("static", filename="images/logo.jpg") }}" alt="Logo avion" class="logo" >
        <li><a href="{{ url_for("marc") }}">Marc</a></li>
        <li><a href="{{ url_for("index") }}">Home</a></li>
        <li><a href="{{ url_for("info") }}">Info</a></li>

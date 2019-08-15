@@ -17,6 +17,12 @@ perros = [
     "chiwuwa"
 ]
 
+#Control de errores 
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template("error-404.html", error=error) 
+
 
 
 @app.route("/")
