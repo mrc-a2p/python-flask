@@ -1,0 +1,7 @@
+html * {
+    font-family: sans-serif;
+}
+
+.logo {
+    max-width: 25px;
+}
