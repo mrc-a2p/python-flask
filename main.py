@@ -23,6 +23,10 @@ perros = [
 def not_found(error):
     return render_template("error-404.html", error=error) 
 
+@app.errorhandler(500)
+def internal_server(error):
+    return render_template("error-500.html", error=error)  
+    # return"Error 500 {}".format(error)
 
 
 @app.route("/")
