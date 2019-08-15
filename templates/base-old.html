@@ -1,0 +1,30 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+<!-- con la palabra super heredamos los atributos del padre -->
+{{super ()}} 
+<!-- Bloque titulo de cada pagina  -->
+<title>{% block title %} bienvenidos a {% endblock %}</title>
+<!-- Primero buscar la carpeta que contiene los archivos staticos -->
+<!-- Segundo con filaname colocas la ruta del archivo -->
+<link rel="stylesheet" type="" href="{{ url_for("static", filename="css/main.css") }}">
+{% endblock %}
+
+
+{% block body %}
+
+    <!-- Aqui va la barra de navegación -->
+   {% block navbar %}
+        {% include "navbar.html"%}
+    {% endblock %}
+        
+    <!-- Aqui va el cuerpo  -->
+    {% block body %}
+    {% endblock %}
+
+    <!-- Aqui va la barra inferior   -->
+    <footer>
+        {% include "footer.html"%}
+    </footer>
+
+{% endblock %}

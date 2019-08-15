@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Bloque titulo de cada pagina  -->
     <title>{% block title %} bienvenidos a {% endblock %}</title>
-    
-    <!-- Primero buscar la carpeta que contiene los archivos staticos -->
-    <!-- Segundo con filaname colocas la ruta del archivo -->
+    <!-- Primero buscar la carpeta que contiene los archivos static -->
+    <!-- Segundo con filaname colocas la ruta de la imagen -->
+    <link rel="stylesheet" type="" href="{{ url_for("static", filename="css/bootstrap.min.css") }}">
     <link rel="stylesheet" type="" href="{{ url_for("static", filename="css/main.css") }}">
+
 </head>
 <body>
     <!-- Aqui va la barra de navegación -->

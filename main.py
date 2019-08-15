@@ -3,9 +3,15 @@
 #make_response optiene respuesta del serividor 
 # render_template te pinta en el navegador lo que haces en consola
 from flask import Flask, request, make_response, redirect, render_template
+#from flask_bootstrap import Bootstrap
+
+
+
 
 #Crear nueva instancia de flask
 app = Flask(__name__)
+#inicializamos extenciones de flask
+#bootstrap = Bootstrap(app)
 
 ############################
 # arrays 
@@ -26,7 +32,7 @@ def not_found(error):
 @app.errorhandler(500)
 def internal_server(error):
     return render_template("error-500.html", error=error)  
-    # return"Error 500 {}".format(error)
+    #return"Error 500 {}".format(error)
 
 
 @app.route("/")

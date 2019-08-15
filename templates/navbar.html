@@ -1,13 +1,19 @@
-
-<nav>
-   <ul>
        <!-- Primero buscar la carpeta que contiene las imagenes static -->
        <!-- Segundo con filaname colocas la ruta de la imagen -->
        <!-- Y con el alt pones el nombre que le quieres dar a la imagen  -->
-       <img src="{{ url_for("static", filename="images/logo.jpg") }}" alt="Logo avion" class="logo" >
-       <li><a href="{{ url_for("marc") }}">Marc</a></li>
-       <li><a href="{{ url_for("index") }}">Home</a></li>
-       <li><a href="{{ url_for("info") }}">Info</a></li>
-       <li><a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank">escula pagian</a></li>
-   </ul> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="{{ url_for("static", filename="images/logo.jpg") }}" alt="Logo avion" class="logo" >
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{{ url_for("info") }}">info <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="{{ url_for("marc") }}">Marc</a>
+      <a class="nav-item nav-link" href="{{ url_for("index") }}">home</a>
+      <a class="nav-item nav-link disabled" href="https://www.w3schools.com/html/html_formatting.asp" tabindex="-1" aria-disabled="true">Escuela</a>
+    </div>
+  </div>
 </nav>
