@@ -7,8 +7,17 @@
     <title>{% block title %} bienvenidos a {% endblock %}</title>
 </head>
 <body>
+    <!-- Aqui va la barra de navegación -->
+    <header>
+        {% include "navbar.html"%}
+    </header>
+        
+    <!-- Aqui va el cuerpo  -->
     {% block body %}
-
     {% endblock %}
+    <!-- Aqui va la barra inferior   -->
+    <footer>
+        {% include "footer.html"%}
+    </footer>
 </body>
 </html>

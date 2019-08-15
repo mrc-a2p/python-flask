@@ -8,9 +8,12 @@
 {% endblock %}
 
 
+
 <!-- Para visualizar el cuerpo incluimos block body en la base  -->
+
 {% block body %}
-<!-- Primero entra en la funcion de hello  y sino lo encuentra te manda la funcion index -->
+<section>
+    <!-- Primero entra en la funcion de hello  y sino lo encuentra te manda la funcion index -->
     {% if user_ip %}
     <h1> dfjeirf esto es lo {{user_ip}}</h1>
     {%else%}
@@ -22,6 +25,7 @@
         {{ muchas_macros.render_jauria(perro) }}
     {% endfor %} 
     </<ul>
+</section>
 
 {% endblock %}
 
