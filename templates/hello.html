@@ -20,6 +20,15 @@
     <a href="{{url_for("index") }}">Haz clic aqui </a>
     {% endif %}  
 
+<!-- En este container se guarda la forma -->
+    <div> class="container">
+        <form>
+            action="[[ url_form("hello") ]]" method = "POST">
+            {{ login_form.username }}
+            {{ login_form.username.label }}
+        </form>
+    </div>
+
     <ul>
     {% for perro in perros %}
         {{ muchas_macros.render_jauria(perro) }}
