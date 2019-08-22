@@ -30,6 +30,6 @@ if __name__ == "__main__":
     result =  palindrome2(word)   
 
     if result is True:
-        print ("{}Si es un palindromo.".format(word ))
+        print ("{} Si es un palindromo.".format(word ))
     else: 
-        print("No es un palindromo.".format(word))   
+        print(" {} No es un palindromo.".format(word))   
